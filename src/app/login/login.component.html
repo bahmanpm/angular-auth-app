@@ -1,0 +1,23 @@
+<div class="row pt-6">
+  <div class="col-md-6 mx-auto">
+    <div class="card rounded-0">
+      <div class="card-header">
+        <h3 class="mb-0">ورود</h3>
+      </div>
+      <div class="card-body">
+        <form action="" class="form">
+          <div class="form-group">
+            <label for="">نام کاربری</label>
+            <input [(ngModel)]="loginUserData.email" type="text" name="email" class="form-control rounded-0" required>
+          </div>
+          <div class="form-group">
+            <label for="">رمزعبور</label>
+            <input [(ngModel)]="loginUserData.password" type="password" name="lastName" class="form-control rounded-0" required>
+          </div>
+          <button (click)="loginUser()" type="button" class="btn btn-success float-right">ورود</button>
+          <span class="unsuccess-message" *ngIf="unsuccessLogin">نام کاربری یا رمزعبور اشتباه است</span>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
